@@ -1,0 +1,461 @@
+$color-primary: #203896;
+$color-secondary:#bf153c;
+$color-tertiary: #DA5838;
+// $color-pink: rgb(255,118,233);
+$color-blue: #003049;
+$color-pink: #f77f00;
+$color-footer: #3d3db6;
+$color-primary-light: #1CB5E0;
+$color-black: #333;
+$color-white: #fff;
+$white: #333;
+
+$text-arrow-space: 16px;
+$shaft-width: 1px;
+$newshaft-width: 64px;
+$shaft-thickness: 1px;
+$arrow-head-width: 8px;
+$arrow-head-thickness: $shaft-thickness;
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+section {height:100vh;}
+
+//footer
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+
+  background-color: $color-footer;
+  
+  .text{
+    padding: 7px 0;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    color: $color-white;
+
+    a{
+      color: $color-white;
+      &:hover{
+        color: $color-tertiary;
+      }
+    }
+  }
+}
+
+#button-next{
+  ul{
+    padding: 15px 0;
+    li{
+      // margin: 0 0 24px;
+      list-style: none;
+    }
+  }
+  
+  // The Arrow
+  .the-arrow {
+    width: $shaft-width;
+    transition: all 0.2s;
+   
+    &.-left {
+      position: absolute;
+      top: 60%;
+      left: 0;
+  
+      > .shaft {
+        width: 0;
+        background-color: $color-white;
+        
+        &:before,
+        &:after {
+          width: 0;
+          background-color: $color-white;
+        }
+  
+        &:before {
+          transform: rotate(0);
+        }
+  
+        &:after {
+          transform: rotate(0);
+        }
+      }
+    }
+    
+    &.-right {
+      top: 3px;
+      
+      > .shaft {
+        width: $shaft-width;
+        transition-delay: 0.2s;
+  
+        &:before,
+        &:after { 
+          width: $arrow-head-width;
+          transition-delay: 0.3s;
+          transition: all 0.5s;
+        }
+        
+        &:before {
+          transform: rotate(40deg);
+        }
+        
+        &:after {
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  
+    > .shaft {
+      background-color: $color-white;
+      display: block;
+      height: $shaft-thickness;
+      position: relative;
+      transition: all 0.2s;
+      transition-delay: 0;
+      will-change: transform;
+  
+      &:before,
+      &:after {
+        background-color: $color-white;
+        content: '';
+        display: block;
+        height: $arrow-head-thickness;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.2s;
+        transition-delay: 0;
+      }
+  
+      &:before {
+        transform-origin: top right;
+      }
+  
+      &:after {
+        transform-origin: bottom right;
+      }
+    }
+  }
+  
+  // Animated Arrow Button
+  .animated-arrow {
+    display: inline-block;
+    color: $color-white;
+    font-size: 1.25em;
+    font-style: italic;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+    
+    &:hover {
+      color: $white;
+      
+      > .the-arrow.-left {
+        > .shaft {
+          width: $newshaft-width;
+          transition-delay: 0.1s;
+          background-color: $white;
+  
+          &:before,
+          &:after {
+            width: $arrow-head-width;
+            transition-delay: 0.1s;
+            background-color: $white;
+          }
+  
+          &:before {
+            transform: rotate(40deg);
+          }
+  
+          &:after {
+            transform: rotate(-40deg);
+          }
+        }
+      }
+      
+      > .main {
+        transform: translateX($shaft-width + $text-arrow-space);
+        transform: translateX($newshaft-width + $text-arrow-space);
+        
+        > .the-arrow.-right {
+          > .shaft {
+            width: 0;
+            transform: translateX(200%);
+            transition-delay: 0;
+            
+            &:before,
+            &:after {
+              width: 0;
+              transition-delay: 0;
+              transition: all 0.1s;
+            }
+  
+            &:before {
+              transform: rotate(0);
+            }
+  
+            &:after {
+              transform: rotate(0);
+            }
+          }
+        }
+      }
+    }
+    
+    > .main {
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
+      
+      > .text-btn {
+        margin: 0 $text-arrow-space 0 0;
+        line-height: 1;
+      }
+      
+      > .the-arrow {
+        position: relative;
+      }
+    }
+  }
+}
+
+//-------index welcome-------//
+.welcome-page{
+  @media only screen and (max-width: 1024px) {
+    background: $color-blue;
+    height: auto;
+  }
+  @media only screen and (max-width: 480px) {
+    background: $color-blue;
+  }
+  height: 100vh;
+  background-color: $color-blue;
+  // background: linear-gradient(90deg, rgba(255,153,238,1) 0%, rgba(255,170,241,1) 25%, rgba(255,255,255,1) 82%);
+
+  .bg-png{
+    @media only screen and (max-width: 1024px) {
+      background-position: top;
+    }
+    width: 100%;
+  }
+  
+  .box-shadow{
+    @media only screen and (max-width: 1024px) {
+      height: 50vh;
+    }
+    @media only screen and (max-width: 480px) {
+      -webkit-filter: none;
+      filter: none;
+      // animation: none;
+      animation-name: blurry;
+      animation-duration: 1.5s;
+      -webkit-animation-name: blurry; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+    }
+    -webkit-filter: drop-shadow(20px -12px 4px $color-white);
+    filter: drop-shadow(20px -12px 0px #fff);
+    animation-name: shadowBorder;
+    animation-duration: 1.5s;
+    -webkit-animation-name: shadowBorder; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+  }
+
+  .box-left{
+    @media only screen and (max-width: 1024px) {
+      height: 50vh;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 60vh;
+      order: 2;
+      background-color: $color-pink;
+      clip-path: none;
+    }
+    height: 100vh;
+    background-color: $color-pink;
+    // background-color: lighten($color: #bc4123, $amount: 10%);
+    clip-path: polygon(80% 0, 100% 25%, 80% 50%, 100% 75%, 80% 100%, 0 100%, 0% 0%);
+    display: flex;
+
+    .text{
+      @media only screen and (max-width: 480px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        animation-name: blurry;
+        animation-duration: 1.5s;
+        -webkit-animation-name: blurry; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+      }
+      margin: auto;
+      padding-left: 30px;
+      padding-right: 60px;
+      color: $color-white;
+
+      .hello{
+        @media only screen and (max-width: 480px) {
+          font-size: 30px;
+        }
+        text-transform: capitalize;
+        font-size: 45px;
+        font-weight: 800;
+      }
+      .title{
+        @media only screen and (max-width: 480px) {
+          font-size: 30px;
+        }
+        // text-transform: capitalize;
+        font-size: 45px;
+        font-weight: 800;
+
+        a{
+          color: $color-white;
+          text-decoration: none;
+        }
+      }
+      .subtitle{
+        @media only screen and (max-width: 480px) {
+          font-size: 22px;
+        }
+        text-transform: capitalize;
+        font-size: 35px;
+      }
+      .description{
+        @media only screen and (max-width: 480px) {
+          font-size: 16px;
+        }
+        font-size: 18px;
+      }
+      .btn-more{
+        @media only screen and (max-width: 480px) {
+          font-size: 12px;
+        }
+        margin-top: 8px;
+        font-size: 16px;
+        padding: 3px 12px;
+        color: $color-white;
+        background-color: lighten($color: #bc4123, $amount: 20%);
+
+        &:hover{
+          color: darken($color: $color-white, $amount: 15%);
+          background-color: lighten($color: #bc4123, $amount: 15%);
+          -webkit-box-shadow: 0px 0px 10px 1px rgba(226,124,99,1);
+          -moz-box-shadow: 0px 0px 10px 1px rgba(226,124,99,1);
+          box-shadow: 0px 0px 10px 1px rgba(226,124,99,1);
+        }
+      }
+    }
+  }
+
+  .box-right{
+    @media only screen and (max-width: 1024px) {
+      height: 50vh;
+      padding: 0 15px;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 40vh;
+      order: 1;
+    }
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    .box{
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      .image{
+        margin-bottom: 20px;
+  
+        img{
+          @media only screen and (max-width: 480px) {
+            width: 65%;
+            border-radius: 50%;
+          }
+          width: 45%;
+          animation-name: blurry;
+          animation-duration: 1.5s;
+          -webkit-animation-name: blurry; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+        }
+
+      }
+
+    }
+  }
+}
+
+//-------about me-------//
+.about-me{
+  height: 100vh;
+  background-color: #f3b05a;
+
+  .title{
+    color: $color-white;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+  }
+}
+
+// ======== KEYFRAMES ======== //
+/* Standard syntax */
+@keyframes shadowBorder {
+  0%   {
+    -webkit-filter: drop-shadow(3px 0px 4px $color-white);
+    filter: drop-shadow(3px 0px 4px $color-white);
+  }
+  80%  {
+    -webkit-filter: drop-shadow(20px -12px 4px $color-white);
+    filter: drop-shadow(20px -12px 4px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(20px -12px 0px $color-white);
+    filter: drop-shadow(20px -12px 0px #fff);
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes shadowBorder {
+  0%   {
+    -webkit-filter: drop-shadow(3px 0px 4px $color-white);
+    filter: drop-shadow(3px 0px 4px $color-white);
+  }
+  80%  {
+    -webkit-filter: drop-shadow(20px -12px 4px $color-white);
+    filter: drop-shadow(20px -12px 4px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(20px -12px 0px $color-white);
+    filter: drop-shadow(20px -12px 0px #fff);
+  }
+}
+
+/* Standard syntax */
+@keyframes blurry {
+  0%   {
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes blurry {
+  0%   {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}

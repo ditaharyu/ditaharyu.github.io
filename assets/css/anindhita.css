@@ -1,0 +1,528 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: #3d3db6;
+}
+
+.footer .text {
+  padding: 7px 0;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer .text a {
+  color: #fff;
+}
+
+.footer .text a:hover {
+  color: #DA5838;
+}
+
+#button-next ul {
+  padding: 15px 0;
+}
+
+#button-next ul li {
+  list-style: none;
+}
+
+#button-next .the-arrow {
+  width: 1px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#button-next .the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+
+#button-next .the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #fff;
+}
+
+#button-next .the-arrow.-left > .shaft:before, #button-next .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #fff;
+}
+
+#button-next .the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#button-next .the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#button-next .the-arrow.-right {
+  top: 3px;
+}
+
+#button-next .the-arrow.-right > .shaft {
+  width: 1px;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#button-next .the-arrow.-right > .shaft:before, #button-next .the-arrow.-right > .shaft:after {
+  width: 8px;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#button-next .the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#button-next .the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#button-next .the-arrow > .shaft {
+  background-color: #fff;
+  display: block;
+  height: 1px;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  will-change: transform;
+}
+
+#button-next .the-arrow > .shaft:before, #button-next .the-arrow > .shaft:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+#button-next .the-arrow > .shaft:before {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+#button-next .the-arrow > .shaft:after {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#button-next .animated-arrow {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#button-next .animated-arrow:hover {
+  color: #333;
+}
+
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  background-color: #333;
+}
+
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before, #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  background-color: #333;
+}
+
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#button-next .animated-arrow:hover > .main {
+  -webkit-transform: translateX(17px);
+          transform: translateX(17px);
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+}
+
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#button-next .animated-arrow > .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#button-next .animated-arrow > .main > .text-btn {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+
+#button-next .animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+
+.welcome-page {
+  height: 100vh;
+  background-color: #003049;
+}
+
+@media only screen and (max-width: 1024px) {
+  .welcome-page {
+    background: #003049;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page {
+    background: #003049;
+  }
+}
+
+.welcome-page .bg-png {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .welcome-page .bg-png {
+    background-position: top;
+  }
+}
+
+.welcome-page .box-shadow {
+  -webkit-filter: drop-shadow(20px -12px 4px #fff);
+  filter: drop-shadow(20px -12px 0px #fff);
+  animation-name: shadowBorder;
+  animation-duration: 1.5s;
+  -webkit-animation-name: shadowBorder;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1.5s;
+  /* Safari 4.0 - 8.0 */
+}
+
+@media only screen and (max-width: 1024px) {
+  .welcome-page .box-shadow {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-shadow {
+    -webkit-filter: none;
+    filter: none;
+    animation-name: blurry;
+    animation-duration: 1.5s;
+    -webkit-animation-name: blurry;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+    /* Safari 4.0 - 8.0 */
+  }
+}
+
+.welcome-page .box-left {
+  height: 100vh;
+  background-color: #f77f00;
+  -webkit-clip-path: polygon(80% 0, 100% 25%, 80% 50%, 100% 75%, 80% 100%, 0 100%, 0% 0%);
+          clip-path: polygon(80% 0, 100% 25%, 80% 50%, 100% 75%, 80% 100%, 0 100%, 0% 0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  .welcome-page .box-left {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left {
+    height: 60vh;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background-color: #f77f00;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
+.welcome-page .box-left .text {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 60px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text {
+    padding-left: 20px;
+    padding-right: 20px;
+    animation-name: blurry;
+    animation-duration: 1.5s;
+    -webkit-animation-name: blurry;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+    /* Safari 4.0 - 8.0 */
+  }
+}
+
+.welcome-page .box-left .text .hello {
+  text-transform: capitalize;
+  font-size: 45px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text .hello {
+    font-size: 30px;
+  }
+}
+
+.welcome-page .box-left .text .title {
+  font-size: 45px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text .title {
+    font-size: 30px;
+  }
+}
+
+.welcome-page .box-left .text .title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.welcome-page .box-left .text .subtitle {
+  text-transform: capitalize;
+  font-size: 35px;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text .subtitle {
+    font-size: 22px;
+  }
+}
+
+.welcome-page .box-left .text .description {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text .description {
+    font-size: 16px;
+  }
+}
+
+.welcome-page .box-left .text .btn-more {
+  margin-top: 8px;
+  font-size: 16px;
+  padding: 3px 12px;
+  color: #fff;
+  background-color: #e27c63;
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-left .text .btn-more {
+    font-size: 12px;
+  }
+}
+
+.welcome-page .box-left .text .btn-more:hover {
+  color: #d9d9d9;
+  background-color: #de6a4e;
+  -webkit-box-shadow: 0px 0px 10px 1px #e27c63;
+  box-shadow: 0px 0px 10px 1px #e27c63;
+}
+
+.welcome-page .box-right {
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  .welcome-page .box-right {
+    height: 50vh;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-right {
+    height: 40vh;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.welcome-page .box-right .box {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-page .box-right .box .image {
+  margin-bottom: 20px;
+}
+
+.welcome-page .box-right .box .image img {
+  width: 45%;
+  animation-name: blurry;
+  animation-duration: 1.5s;
+  -webkit-animation-name: blurry;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1.5s;
+  /* Safari 4.0 - 8.0 */
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-page .box-right .box .image img {
+    width: 65%;
+    border-radius: 50%;
+  }
+}
+
+.about-me {
+  height: 100vh;
+  background-color: #f3b05a;
+}
+
+.about-me .title {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Standard syntax */
+@keyframes shadowBorder {
+  0% {
+    -webkit-filter: drop-shadow(3px 0px 4px #fff);
+    filter: drop-shadow(3px 0px 4px #fff);
+  }
+  80% {
+    -webkit-filter: drop-shadow(20px -12px 4px #fff);
+    filter: drop-shadow(20px -12px 4px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(20px -12px 0px #fff);
+    filter: drop-shadow(20px -12px 0px #fff);
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes shadowBorder {
+  0% {
+    -webkit-filter: drop-shadow(3px 0px 4px #fff);
+    filter: drop-shadow(3px 0px 4px #fff);
+  }
+  80% {
+    -webkit-filter: drop-shadow(20px -12px 4px #fff);
+    filter: drop-shadow(20px -12px 4px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(20px -12px 0px #fff);
+    filter: drop-shadow(20px -12px 0px #fff);
+  }
+}
+
+/* Standard syntax */
+@keyframes blurry {
+  0% {
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes blurry {
+  0% {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}
+/*# sourceMappingURL=anindhita.css.map */
