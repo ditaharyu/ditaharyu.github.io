@@ -151,21 +151,21 @@ section {
 }
 
 #button-next .animated-arrow:hover {
-  color: #333;
+  color: #003049;
 }
 
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft {
   width: 64px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
-  background-color: #333;
+  background-color: #003049;
 }
 
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before, #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   width: 8px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
-  background-color: #333;
+  background-color: #003049;
 }
 
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before {

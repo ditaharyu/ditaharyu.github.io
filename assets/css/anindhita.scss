@@ -158,19 +158,19 @@ section {height:100vh;}
     transition: all 0.2s;
     
     &:hover {
-      color: $white;
+      color: $color-blue;
       
       > .the-arrow.-left {
         > .shaft {
           width: $newshaft-width;
           transition-delay: 0.1s;
-          background-color: $white;
+          background-color: $color-blue;
   
           &:before,
           &:after {
             width: $arrow-head-width;
             transition-delay: 0.1s;
-            background-color: $white;
+            background-color: $color-blue;
           }
   
           &:before {
