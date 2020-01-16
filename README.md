@@ -1,2 +1,2 @@
 # ditaharyu.github.io
-My Website Profile
+Personal Website
