@@ -1,2 +1,4 @@
 # ditaharyu.github.io
-Hello! This repository for my Personal Website
+Hello! Reach me through https://ditaharyu.github.io
+
+Have a nice day :)
