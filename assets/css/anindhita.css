@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 section {
@@ -15,7 +15,7 @@ section {
   bottom: 0;
   width: 100%;
   z-index: 9;
-  background-color: #3d3db6;
+  background-color: #15616d;
 }
 
 .footer .text {
@@ -32,7 +32,7 @@ section {
 }
 
 .footer .text a:hover {
-  color: #DA5838;
+  color: #da5838;
 }
 
 #button-next ul {
@@ -60,19 +60,20 @@ section {
   background-color: #fff;
 }
 
-#button-next .the-arrow.-left > .shaft:before, #button-next .the-arrow.-left > .shaft:after {
+#button-next .the-arrow.-left > .shaft:before,
+#button-next .the-arrow.-left > .shaft:after {
   width: 0;
   background-color: #fff;
 }
 
 #button-next .the-arrow.-left > .shaft:before {
   -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 #button-next .the-arrow.-left > .shaft:after {
   -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 #button-next .the-arrow.-right {
@@ -82,25 +83,26 @@ section {
 #button-next .the-arrow.-right > .shaft {
   width: 1px;
   -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
-#button-next .the-arrow.-right > .shaft:before, #button-next .the-arrow.-right > .shaft:after {
+#button-next .the-arrow.-right > .shaft:before,
+#button-next .the-arrow.-right > .shaft:after {
   width: 8px;
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 #button-next .the-arrow.-right > .shaft:before {
   -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 
 #button-next .the-arrow.-right > .shaft:after {
   -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
+  transform: rotate(-40deg);
 }
 
 #button-next .the-arrow > .shaft {
@@ -111,13 +113,14 @@ section {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -webkit-transition-delay: 0;
-          transition-delay: 0;
+  transition-delay: 0;
   will-change: transform;
 }
 
-#button-next .the-arrow > .shaft:before, #button-next .the-arrow > .shaft:after {
+#button-next .the-arrow > .shaft:before,
+#button-next .the-arrow > .shaft:after {
   background-color: #fff;
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   position: absolute;
@@ -126,17 +129,17 @@ section {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -webkit-transition-delay: 0;
-          transition-delay: 0;
+  transition-delay: 0;
 }
 
 #button-next .the-arrow > .shaft:before {
   -webkit-transform-origin: top right;
-          transform-origin: top right;
+  transform-origin: top right;
 }
 
 #button-next .the-arrow > .shaft:after {
   -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform-origin: bottom right;
 }
 
 #button-next .animated-arrow {
@@ -157,58 +160,60 @@ section {
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft {
   width: 64px;
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
   background-color: #003049;
 }
 
-#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before, #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before,
+#button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   width: 8px;
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
   background-color: #003049;
 }
 
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:before {
   -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 
 #button-next .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
+  transform: rotate(-40deg);
 }
 
 #button-next .animated-arrow:hover > .main {
   -webkit-transform: translateX(17px);
-          transform: translateX(17px);
+  transform: translateX(17px);
   -webkit-transform: translateX(80px);
-          transform: translateX(80px);
+  transform: translateX(80px);
 }
 
 #button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
   width: 0;
   -webkit-transform: translateX(200%);
-          transform: translateX(200%);
+  transform: translateX(200%);
   -webkit-transition-delay: 0;
-          transition-delay: 0;
+  transition-delay: 0;
 }
 
-#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before,
+#button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
   width: 0;
   -webkit-transition-delay: 0;
-          transition-delay: 0;
+  transition-delay: 0;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
 #button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
   -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 #button-next .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
   -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
 }
 
 #button-next .animated-arrow > .main {
@@ -216,8 +221,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -233,24 +238,26 @@ section {
 
 .welcome-page {
   height: 100vh;
-  background-color: #003049;
+  background-color: #ffecd1;
 }
 
 @media only screen and (max-width: 1024px) {
   .welcome-page {
-    background: #003049;
+    background: #ffecd1;
     height: auto;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .welcome-page {
-    background: #003049;
+    background: #ffecd1;
   }
 }
 
 .welcome-page .bg-png {
   width: 100%;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -291,9 +298,25 @@ section {
 
 .welcome-page .box-left {
   height: 100vh;
-  background-color: #f77f00;
-  -webkit-clip-path: polygon(80% 0, 100% 25%, 80% 50%, 100% 75%, 80% 100%, 0 100%, 0% 0%);
-          clip-path: polygon(80% 0, 100% 25%, 80% 50%, 100% 75%, 80% 100%, 0 100%, 0% 0%);
+  background-color: #ff7d00;
+  -webkit-clip-path: polygon(
+    80% 0,
+    100% 25%,
+    80% 50%,
+    100% 75%,
+    80% 100%,
+    0 100%,
+    0% 0%
+  );
+  clip-path: polygon(
+    80% 0,
+    100% 25%,
+    80% 50%,
+    100% 75%,
+    80% 100%,
+    0 100%,
+    0% 0%
+  );
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,11 +332,11 @@ section {
   .welcome-page .box-left {
     height: 60vh;
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     background-color: #f77f00;
     -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
   }
 }
 
@@ -426,8 +449,8 @@ section {
   .welcome-page .box-right {
     height: 40vh;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
 }
 
